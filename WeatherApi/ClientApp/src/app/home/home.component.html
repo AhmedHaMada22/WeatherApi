@@ -1,0 +1,18 @@
+<h1>Weather</h1>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Tempreture (C)</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let temp of service.list.hourly.time; let indexItem = index">
+      <td>{{temp}}</td>
+      <td>{{service.list.hourly.temperature_2m[indexItem]}}</td>
+    </tr>
+  </tbody>
+</table>
